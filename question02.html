@@ -17,7 +17,13 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var a = document.getElementsByClassName('a');
+        for (var i = 0; i < a.length; i++) {
+          console.log(a[i].textContent);
+        }
+      });
     </script>
   </body>
 </html>

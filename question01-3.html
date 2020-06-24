@@ -14,7 +14,11 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var textbox = document.getElementById('textbox');
+        console.log(textbox.name);
+      });
     </script>
   </body>
 </html>

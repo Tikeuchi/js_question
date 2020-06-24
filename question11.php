@@ -5,7 +5,7 @@
     'age' => '30',
   );
   // 連想配列 $map をJSON化して下さい
-
+  $json = json_encode($map);
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,9 @@
     2. JavaScriptで取得して連想配列に戻したものをconsoleに表示して下さい。<br>
     3. 更にその連想配列を再度JSON化したものをconsoleに表示して下さい。<br><br>
     <!-- この間にJSON化したHTMLを埋め込んで下さい↓ -->
-
+    <div id="user">
+      <?php echo $json ?>
+    </div>
     <!-- この間にJSON化したHTMLを埋め込んで下さい↑ -->
     <div>
       <input type="button" id="btn" value="button">
@@ -30,7 +32,14 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var user = document.getElementById('user');
+        var arr = JSON.parse(user.textContent);
+        console.log(arr);
+        var json = JSON.stringify(arr);
+        console.log(json);
+      });
     </script>
   </body>
 </html>

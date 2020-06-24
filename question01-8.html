@@ -22,7 +22,11 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var list = document.getElementById('parent');
+        console.log(list.children[2].children[1].textContent);
+      });
     </script>
   </body>
 </html>

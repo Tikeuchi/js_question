@@ -17,7 +17,10 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        setCheckBoxValue('name', ['check01', 'check02']);
+      });
     </script>
   </body>
 </html>

@@ -14,7 +14,11 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var js = document.getElementById('js');
+        console.log(js.classList);
+      });
     </script>
   </body>
 </html>

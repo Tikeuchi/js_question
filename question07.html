@@ -13,9 +13,17 @@
     <input type="button" id="btn01" value="button01">
     <input type="button" id="btn02" value="button02">
 
+    <script src="method.js"></script>
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn01 = document.getElementById('btn01');
+      var btn02 = document.getElementById('btn02');
+      btn01.addEventListener('click', function() {
+        location.href = location.href + '?a=A&b=B&c=C';
+      });
+      btn02.addEventListener('click', function() {
+        console.log(getHrefParam('b'));
+      });
     </script>
   </body>
 </html>

@@ -15,9 +15,13 @@
       <input type="button" id="btn" value="button">
     </div>
 
+    <script src="method.js"></script>
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        console.log(getRadioValue('name'));
+      });
     </script>
   </body>
 </html>

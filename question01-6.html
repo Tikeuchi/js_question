@@ -16,7 +16,13 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      console.log(js);
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var js = document.getElementById('js');
+        js.className = "bbb"
+        console.log(js);
+      });
     </script>
   </body>
 </html>

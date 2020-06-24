@@ -16,20 +16,22 @@
     </div>
     <div id="result">【ここに結果を表示する】</div>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-      var btn = document.getElementById('btn');
-      btn.addEventListener('click', function() {
-        var text = document.getElementById('text');
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'question09.php?name=' + text.value);
-        xhr.send();
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            var result = document.getElementById('result');
-            result.textContent = xhr.responseText;
-          }
-        }
+      $(function() {
+        $("#btn").click(function() {
+          $.ajax({
+            url: "question09.php",
+            type: "GET",
+            data: $("#text"),
+            dataType: "text"
+          }).done(function(data) {
+            $("#result").text(data);
+          }).fail(function(data) {
+            $("#result").text("失敗");
+          });
+        });
       });
     </script>
   </body>

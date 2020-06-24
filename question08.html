@@ -13,7 +13,13 @@
 
     <script type="text/javascript">
       // ここからJavaScriptを記述して下さい
-
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var hoge =document.getElementById('hoge');
+        var newDiv = document.createElement("div");
+        newDiv.textContent = 'hoge';
+        hoge.appendChild(newDiv);
+      });
     </script>
   </body>
 </html>
