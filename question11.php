@@ -25,7 +25,7 @@
 
     <!-- この間にJSON化したHTMLを埋め込んで下さい↑ -->
     <div>
-      <input type="button" id="btn"  value="button">
+      <input type="button" id="btn" value="button">
     </div>
 
     <script type="text/javascript">
