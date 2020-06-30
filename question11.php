@@ -21,11 +21,10 @@
     buttonをクリックした時、<br>
     2. JavaScriptで取得して連想配列に戻したものをconsoleに表示して下さい。<br>
     3. 更にその連想配列を再度JSON化したものをconsoleに表示して下さい。<br><br>
-    <!-- この間にJSON化したHTMLを埋め込んで下さい↓ -->
     <div id="user">
+    	<!-- この間にJSON化したHTMLを埋め込んで下さい -->
       <?php echo $json ?>
     </div>
-    <!-- この間にJSON化したHTMLを埋め込んで下さい↑ -->
     <div>
       <input type="button" id="btn" value="button">
     </div>
